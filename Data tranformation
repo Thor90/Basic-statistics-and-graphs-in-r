@@ -1,0 +1,5 @@
+3. Data tranformation 
+
+aa<- transform(dataset, x(centering)= x- mean(x)) # tranform data
+aa<-ifelse(dataset$x<10, "yes", "no") # if else 
+write.csv(dataset, file="file_name.csv") # write data into .csv file
