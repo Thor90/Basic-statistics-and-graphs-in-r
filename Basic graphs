@@ -1,0 +1,44 @@
+4. Basic graphs
+
+# Change the window
+par(mfrow=c(1,2)) 
+
+# Barplots for categorical data
+aa<- table(x) # tabulate frequency for aa categories
+aa1<- prop.table(x) # convert to proportions
+barplot(aa, main="title", xlab="nameX", ylab="nameY", las=1, names.org=c("name1", "name2")) 
+barplot(aa, beside=T) # change clustered barchat with
+barplot(aa, beside=T, legend.text=c("name1", "name2")) # make a tagging labels
+mosaicplot(aa)
+
+# Pie chart
+pie(aa, main="title") 
+box() # create a box
+
+# Stem-and-leaf Chart
+stem(x)
+
+# Histograms
+hist(x) # frequency
+hist(x, prob=T) # density or proportions
+hist(x, prob=T, ylim=c(0, 0.5), breaks=seq(from=0, to=10, by=2), main="title", xlab="nameX", last=1) # full plot 
+lines(density(X), col=2, lwd=3,) # add a line with color
+
+# Box-and-whisker plots
+boxplot(x, main="title", ylab="NameY", las=1, horizontal=T) # horizontal boxplot
+
+# QQ-plot and QQ-line
+qqnorm(x)
+qqline(x)
+
+# Scatterplot
+cor(x, y) # run a correlation to see the relationship
+plot(x, y, xlim=c(0,10), ylim=c(0,10), main="title", xlab="nameX", ylab="nameY", las=1, col=2) # example plot
+plot(x, y, main="title", cex=0.5, cex.main=2, cex.lab=1.5, font.axis=0.7) # change the size of the labels
+plot(x, y, main="title", font=4, font.main= 3, font.lab=2, font.axis=3) # change the font of the labels
+plot(x, y, main="title", pch="2") # change the pattern of residuals
+
+# Save your works
+pdf("file_name.pdf")
+plot(x)
+dev.off()
