@@ -1,0 +1,13 @@
+1. Showcase descriptive statistics
+
+mean(x) # the average
+median(x) # the median
+var(x) # the varaince
+sqrt(x) # square root
+min(x) # minimum
+max(x) # maximum
+range(x) # the range
+quantile(x) 
+sd(x) # the standard deviation
+summary(x) # the summary
+summary(subset(dataset, select=c("x1", "x2", "x3"))) # summary subset
